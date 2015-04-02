@@ -1,0 +1,25 @@
+.room-side-bar{
+	max-width: 320px;
+	background-color: #999;
+	color: #666;
+	position: absolute;
+	top:0;
+	left:0;
+	bottom:0;
+	padding: 10px;
+
+	.rooms{
+		padding:0;
+	}
+
+	.room{
+		list-style-type: none;
+		font-size: 20px;
+		padding-bottom:5px;
+		color: #333;
+	}
+
+	input{
+		color:black;
+	}
+}
