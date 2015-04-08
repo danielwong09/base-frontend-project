@@ -29,8 +29,6 @@ BlocChat.controller('Home.controller', ['$scope', 'Room', '$modal', function($sc
 
     modalInstance.result.then(function (newRoomName) {
       Room.add({name: newRoomName});
-    }, function () {
-      $log.info('Modal dismissed at: ' + new Date());
     });
 
   };
@@ -47,8 +45,11 @@ BlocChat.factory('Room', ['$firebaseArray', function($firebaseArray) {
   return {
     all: rooms,
     add: function(newRoom) {
-
+      if(newRoom){
        rooms.$add({ name: newRoom.name});
+      } else{
+        console.log("newRoom is invalid");
+      }
       
      },
   }
@@ -57,9 +58,17 @@ BlocChat.factory('Room', ['$firebaseArray', function($firebaseArray) {
 
 BlocChat.controller('newRoomModal.controller', [ '$scope', '$modalInstance', function ($scope, $modalInstance) {
 
-
   $scope.addRoom = function () {
-    $modalInstance.close($scope.newRoomName);
+
+    //room name error checking 
+    //can't be repeat, do this later
+
+    //can't be blank
+    if($scope.newRoomName){
+      $modalInstance.close($scope.newRoomName);
+    } else{
+      console.log("newRoomName is not truthy");
+    }
   };
 
   $scope.cancel = function () {

@@ -1,5 +1,10 @@
-<form>
-	<input type="text" ng-model='newRoomName'></input>
-	<button ng-click="addRoom()">Add Room</button>
-	<button ng-click="cancel()">Cancel</button>
+<form >
+	<h1>Create new room</h1>
+	<div class="form-group">
+		<label for="newRoomNameField" >Name</label>
+		<input id="newRoomNameField" class="form-control" type="text" ng-model="newRoomName" autofocus></input>
+	</div>
+	<input type="button" class="btn btn-default" ng-click="cancel()" value="Cancel">
+	<input type="submit" ng-disabled="!newRoomName" class="btn btn-primary" ng-click="addRoom()" value="Create Room"  >
+	
 </form>
