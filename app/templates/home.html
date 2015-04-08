@@ -1,9 +1,7 @@
 <div class="room-side-bar">
 	<h1>Rooms</h1>
-	<form>
-		<input type="text" ng-model='roomName'></input>
-		<button ng-click="addRoom()">Add Room</button>
-	</form>
+
+	<button class='btn btn-default' ng-click="openNewRoomModal()">New Room</button>
 	
 	<ul class="rooms">
 		<li class="room" ng-repeat="room in rooms">
