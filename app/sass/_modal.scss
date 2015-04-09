@@ -1,0 +1,14 @@
+//Modal styling
+.newRoomModal{
+
+	margin: 10px 20px 20px 20px;
+
+	.btn{
+		width: calc(50% - 9px);
+	}
+
+	.btn+.btn{
+		margin-left: 14px;
+	}
+
+}

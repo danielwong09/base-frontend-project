@@ -1,4 +1,6 @@
-.room-side-bar{
+  @import "modal";
+
+  .room-side-bar{
 	max-width: 320px;
 	background-color: #999;
 	color: #666;
@@ -23,3 +25,14 @@
 		color:black;
 	}
 }
+
+
+/*
+Room modal
+- move styling outside
+- add margin
+- change size
+- change colors
+- change button sizes to
+
+*/

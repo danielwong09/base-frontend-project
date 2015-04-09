@@ -20,6 +20,7 @@ BlocChat.controller('Home.controller', ['$scope', 'Room', '$modal', function($sc
     var modalInstance = $modal.open({
       templateUrl: '/templates/newRoomModal.html',
       controller: 'newRoomModal.controller',
+      size: 'sm',
       resolve: {
         rooms: function () {
           return $scope.rooms;
